@@ -16,11 +16,13 @@ public class ProbarMiExcepcion {
     public static void main(String[] args) {
         try {
             Cliente c=new Cliente();
-           c.setEdad(-21);
+           c.setEdad(15);
         } catch (ValorNoNegativoException ex) {
             System.out.println(ex.getMessage());
             
          
+        }catch(ValorMenorDeEdadException e){
+           System.out.println(e.getMessage());
         }finally{
             System.out.println("eSTE SIEMPRE SE EJECUTA SE LANCE O NO LA EXCEPCION");
         }

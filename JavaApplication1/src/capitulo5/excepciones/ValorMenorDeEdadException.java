@@ -9,8 +9,8 @@ package capitulo5.excepciones;
  * @author CQ43
  */
 public class ValorMenorDeEdadException extends Exception{
-   public ValorMenorDeEdadException(){
-       super("no puedes meter un valor menor");
+   public ValorMenorDeEdadException(){   ///el constructor
+       super("no puedo dar de alta a un menor de 18 años");
    }
     
 }
