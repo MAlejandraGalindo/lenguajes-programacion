@@ -9,9 +9,11 @@ package capitulo8.inputoutput;
  *
  * @author T-101
  */
-public class climaTemp extends javax.swing.{
+public class climaTemp extends javax.swing.JFormattedTextField{
     public String hora;
     public String temperatura;
+    
+    
     
         
     }

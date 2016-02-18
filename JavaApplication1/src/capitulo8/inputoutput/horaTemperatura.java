@@ -33,6 +33,7 @@ public class horaTemperatura extends javax.swing.JFrame {
         temperatura = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 0, 102));
 
         jLabel1.setText("hora");
 
