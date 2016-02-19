@@ -5,21 +5,29 @@
  */
 package capitulo8.inputoutput;
 
-import java.net.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
-public class MiPrimeraConexion {
-    public static void main(String[] args) throws  Exception{
-        //primero vamos a usar una clase que se llama url
+/**
+ *
+ * @author T-101
+ */
+public class ServicioLeerEstacion {
+
+    
+    public static String generarValor(String etiqueta)throws Exception{
+       String valor="sin valor";
+
         URL url=new URL("http://www.weatherlink.com/user/sierraguadalupe/index.php?view=summary&headers=0");
         url.openConnection();
         HttpURLConnection con=(HttpURLConnection) url.openConnection();
             InputStream input=con.getInputStream();
             InputStreamReader isr=new InputStreamReader(input);
             BufferedReader reader=new BufferedReader(isr);
-            ///int renglones=0;
-            ///boolean encontrado=false;
-            ///String temperaturas[]=new String[5];
+           
             String lineaActual="no ha leido nada";
               boolean encontrado=false;
               int miLinea=0;
@@ -31,39 +39,21 @@ public class MiPrimeraConexion {
                            
                             
                     String temActual=lineaActual.substring(indice+1,indice2);
+                    valor=temActual;
                     System.out.println(temActual);
                     miLinea++;
                 }
-                if (lineaActual.contains("Outside Temp")){
+                if (lineaActual.contains(etiqueta)){
                     encontrado=true;
                     
                     System.out.println("DATO ENCONTRADO!!");
                     
                     
                 }
-               /// String renglonActual=reader.readLine();
-                ///if(renglonActual.contains("Outside Te"))
-                  ///ncontrado=true;
-                //System.out.println("Si existe este renglon");
-            }
-            
-            }
-             //   renglones++;
-              //  if(reader.readLine().contains("Current Conditions as of") ||renglones==100){
-               // reader.readLine();
-               // System.out.println(reader.readLine());
-          //  }
-           //  String hola="<td width=class summary_dat>21.1 C</td>";
-           //   int indice=hola.indexOf("sumary_data");
-            //  int indice2=hola.indexOf("</td>");
-            //  String nuevo=hola.substring(indice+13, indice2);
-             // System.out.println(nuevo);
-                
-                     }
-            
+    }
+    return valor;
+}
+}
 
 
-   
-        
-   
 
