@@ -10,6 +10,7 @@ package capitulo11.collections;
  * @author T-101
  */
 import java.util.*;
+import javax.swing.JRadioButton;
 public class GeneradorPreguntas {
     
 
@@ -51,7 +52,24 @@ preguntas.add(p2);
 
 return preguntas;
         }
-    
+    public static boolean checarRespuesta(Pregunta p, JRadioButton[] radios){
+boolean respuesta=false;
+String seleccion="";
+for(JRadioButton radio:radios){
+    if(radio.isSelected()){
+        seleccion=radio.getText();
+    }
+    }
+for(Opcion o:p.getOpciones()){
+    if(o.isEstatus()){ 
+        if(o.getTitulo().equals(seleccion))respuesta=true;
+    }
 }
+return respuesta;
 
+}
+    
+
+
+}
 

@@ -29,12 +29,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="radio3" min="-2" max="-2" attributes="0"/>
-                      <Component id="radio2" min="-2" max="-2" attributes="0"/>
-                      <Component id="radio1" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="radio3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio2" min="-2" max="-2" attributes="0"/>
+                          <Component id="radio1" min="-2" max="-2" attributes="0"/>
                           <Component id="radio0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -123,6 +123,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ir a la sig pregunta"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
