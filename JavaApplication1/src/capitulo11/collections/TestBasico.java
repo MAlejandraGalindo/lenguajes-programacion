@@ -21,18 +21,11 @@ int numero=0;
      * Creates new form TestBasico
      */
     public TestBasico() {
-        initComponents();//inicializa todos los componentes que necesitamos para el formulario
-        radios[0]=radio0;
-        radios[1]=radio1;
-        radios[2]=radio2;
-        radios[3]=radio3;
-         preguntas= GeneradorPreguntas.obtenerTodasLasPreguntas();
-        pregunta.setText(preguntas.get(0).getTitulo());
-         radio0.setText(preguntas.get(0).getOpciones().get(0).getTitulo());
-         radio1.setText(preguntas.get(0).getOpciones().get(1).getTitulo());
-         radio2.setText(preguntas.get(0).getOpciones().get(2).getTitulo());
-         radio3.setText(preguntas.get(0).getOpciones().get(3).getTitulo());//
-      
+        preguntas=GeneradorPreguntas.obtenerTodasLasPreguntas();
+        initComponents();
+        iniciarTodas();
+//inicializa todos los componentes que necesitamos para el formulario
+        
                  
     }
 
@@ -131,7 +124,7 @@ int numero=0;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 ///CODIGO//
-        boolean respuesta=GeneradorPreguntas.checarRespuesta(preguntas.get(0), radios);
+        boolean respuesta=GeneradorPreguntas.checarRespuesta(preguntas.get(numero), radios);
        
         JOptionPane.showMessageDialog(rootPane,"Respuesta:"+respuesta);
         
@@ -142,7 +135,7 @@ int numero=0;
      
         // TODO add your handling code here:
            numero++;
-        IniciarTodas();
+        iniciarTodas();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -191,7 +184,7 @@ int numero=0;
     private javax.swing.JRadioButton radio3;
     // End of variables declaration//GEN-END:variables
 public void iniciarTodas(){
-  if(numero<preguntas.size())
+  if(numero<preguntas.size()){
       
         radios[0]=radio0;
         radios[1]=radio1;
@@ -209,10 +202,9 @@ public void iniciarTodas(){
                  
     }
 
-    private void IniciarTodas() {
-        
     }
-}
+    
+    }
 
 
 

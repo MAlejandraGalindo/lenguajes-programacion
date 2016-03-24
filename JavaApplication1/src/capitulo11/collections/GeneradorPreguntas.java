@@ -38,10 +38,10 @@ ArrayList<Pregunta>preguntas=new ArrayList<Pregunta>();
 preguntas.add(p1);
 
  ArrayList<Opcion>opciones2=new ArrayList<Opcion>();
-opciones.add(op1);
-opciones.add(op2);
-opciones.add(op3);
-opciones.add(op4);
+opciones2.add(op1);
+opciones2.add(op2);
+opciones2.add(op3);
+opciones2.add(op4);
 Pregunta p2=new Pregunta ("Capital de china",opciones2);
 
 preguntas.add(p2);
