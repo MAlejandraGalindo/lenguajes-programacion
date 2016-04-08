@@ -15,7 +15,7 @@ public static cliente[] obtenerClientes(){
     cliente clientes[]=new cliente[3];
     clientes[0]=new cliente("ana","lopez",20,2000, new Direccion("sur 10",20,"ecatepec"));
     clientes[1]=new cliente("pedro","martinez",45,14, new Direccion("mexico",122,"neza"));
-    clientes[2]=new cliente("laura","gomez",30,70000, new Direccion("r1",43,"coacalco");
+    clientes[2]=new cliente("laura","gomez",30,70000, new Direccion("r1",43,"coacalco"));
     
     
     

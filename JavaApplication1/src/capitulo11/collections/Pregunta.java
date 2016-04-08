@@ -9,6 +9,7 @@ package capitulo11.collections;
  *
  * @author T-101
  */
+import SolucionExamen.OPCION;
 import java.util.*;  //clase moderada
 public class Pregunta {
         private String titulo;
@@ -17,6 +18,10 @@ public class Pregunta {
     public Pregunta(String titulo, ArrayList<Opcion> opciones) {
         this.titulo = titulo;
         this.opciones = opciones;
+    }
+
+    public Pregunta(String capital_de_rusia, OPCION[] opciones) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getTitulo() {

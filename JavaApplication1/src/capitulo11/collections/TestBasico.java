@@ -20,6 +20,7 @@ public class TestBasico extends javax.swing.JFrame {
     JRadioButton radios[]=new JRadioButton[4];
    int numero=0;
    int x=60;
+   iniciarTodas();
     /**
      * Creates new form TestBasico
      */
@@ -47,7 +48,7 @@ public class TestBasico extends javax.swing.JFrame {
                     }
                 }
                   }
-               });
+               };
         t1.start();
         iniciarTodas();
 
@@ -224,6 +225,7 @@ public void iniciarTodas(){
         radios[2]=radio2;
         radios[3]=radio3;
        
+        
         
        ArrayList<Pregunta> preguntas= GeneradorPreguntas.obtenerTodasLasPreguntas();
         pregunta.setText(preguntas.get(numero).getTitulo());

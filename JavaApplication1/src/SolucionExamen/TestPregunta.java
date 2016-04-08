@@ -5,6 +5,8 @@
  */
 package SolucionExamen;
 
+import capitulo11.collections.Pregunta;
+
 /**
  *
  * @author T-101
